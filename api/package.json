@@ -1,0 +1,25 @@
+{
+  "name": "notification-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamza-ahmed1/notification-system.git#main"
+  },
+  "author": "Hamza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamza-ahmed1/notification-system/issues"
+  },
+  "homepage": "https://github.com/hamza-ahmed1/notification-system/tree/main#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.7.5"
+  }
+}
