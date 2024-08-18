@@ -97,3 +97,21 @@ INSERT INTO tbl_sec_for_teacher (teacher_id_from_tbl_teacher, prog_id, dec_id, s
 (1, 1, 1, 4, 1),  -- Dr. Smith teaches BSCS Section A in 4th Sem
 (1, 2, 2, 4, 2),  -- Dr. Smith teaches MSCS Section B in 4th Sem
 (2, 1, 1, 4, 3);  -- Prof. Johnson teaches BSCS Section C in 4th Sem
+-- for notifications: 
+CREATE TABLE tbl_notifications (
+    notification_id INT AUTO_INCREMENT PRIMARY KEY,
+    teacher_id INT, -- who sent 
+    message TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    -- for which student group 
+    prog_id INT,
+    dec_id INT,
+    sem_id INT,
+    sec_id INT,
+    FOREIGN KEY (teacher_id) REFERENCES tbl_teacher(teacher_id),
+    FOREIGN KEY (prog_id) REFERENCES tbl_programs(prog_id),
+    FOREIGN KEY (dec_id) REFERENCES tbl_dec(dec_id),
+    FOREIGN KEY (sem_id) REFERENCES tbl_sem(sem_id),
+    FOREIGN KEY (sec_id) REFERENCES tbl_sections(sec_id)
+);
+
