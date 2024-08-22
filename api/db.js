@@ -6,3 +6,8 @@ export const  db=mysql.createConnection({
     password:"daniyal",
     database:"db_notification"
 })
+
+db.connect((err) => {
+    if (err) throw err;
+    console.log('Connected to database!');
+  });

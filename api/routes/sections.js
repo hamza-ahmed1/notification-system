@@ -1,8 +1,9 @@
-import express from 'express'
-import { get_programs } from '../controller/sections.js';
+import express from 'express';
+import { get_dec, get_programs } from '../controller/sections.js';
 
-export const router=express.Router();
+const router = express.Router();
 
-router.get('/',get_programs);
+router.get('/', get_programs);
+router.get('/dec', get_dec);
 
 export default router;
